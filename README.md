@@ -2,19 +2,20 @@
 
 # Quizbee buzzer switch
 
+A 5-player quiz bee buzzer with lock-out latches, a 3-bit encoder and a 7-segment winner display, built from 61 logic gates in Wokwi for [Tiny Tapeout](https://tinytapeout.com).
+
 - [Read the documentation for project](docs/info.md)
 
-## What is Tiny Tapeout? test
+## Overview
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+- **Inputs:** `ui[0]`..`ui[4]` are buzzers 1-5, `ui[5]` is CLEAR (all active high, use pull-downs).
+- **Outputs:** `uo[0]`..`uo[6]` drive a common-cathode 7-segment display (a-g); `uo[7]` (DP) is always 0.
+- **Behaviour:** the first buzzer pressed wins and the display shows its number (`1`-`5`); all other buzzers are locked out until CLEAR is pressed. Idle shows `0`. Press CLEAR once after power-up.
+- **Design:** five cross-coupled NAND latches with a 4-AND lock-out chain each, an encoder, and a 7-segment decoder. All gates sit inside the chip between the Wokwi input and output blocks.
 
-To learn more and get started, visit https://tinytapeout.com.
+## Wokwi project
 
-## Wokwi Projects
-
-Edit the [info.yaml](info.yaml) and change the `wokwi_id` to the ID of your Wokwi project. You can find the ID in the URL of your project, it's the big number after `wokwi.com/projects/`.
-
-The GitHub action will automatically fetch the digital netlist from Wokwi and build the ASIC files.
+The design lives in Wokwi (`wokwi_id` in [info.yaml](info.yaml)). The GitHub action fetches the digital netlist from Wokwi and builds the ASIC files. The `wokwi_id` is the number after `wokwi.com/projects/` in your project's URL; after changing the diagram, make sure it points to the updated project.
 
 ## Enable GitHub actions to build the results page
 
@@ -27,13 +28,3 @@ The GitHub action will automatically fetch the digital netlist from Wokwi and bu
 - [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
 - [Join the community](https://tinytapeout.com/discord)
 - [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
