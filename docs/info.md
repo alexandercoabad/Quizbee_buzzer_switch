@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-A 5-contestant quiz bee buzzer built entirely from basic logic gates (61 gates, designed in Wokwi). The first contestant to press a button wins; everyone else is locked out until the host presses CLEAR. The winner's number is shown on a 7-segment display.
+A 5-contestant quiz bee buzzer built **purely from basic logic gates** (61 gates: AND, OR, NOT and NAND only, no microcontroller, no flip-flops, no clock), designed in Wokwi. It is a compact, real-world example for **teaching basic logic circuits**. The first contestant to press a button wins; everyone else is locked out until the host presses CLEAR. The winner's number is shown on a 7-segment display.
 
 Wokwi project (simulate it in your browser): https://wokwi.com/projects/481740336442682369
 
@@ -20,6 +20,22 @@ Wokwi project (simulate it in your browser): https://wokwi.com/projects/48174033
 All of the gates (latches, encoder and decoder) are inside the chip, between the input and output pins. The clock and reset pins are not used, because the design is purely gate/latch based.
 
 > **Power-up:** the latches start in an unknown state. Press CLEAR once after power-up.
+
+## Why it is good for teaching logic circuits
+
+Everything a first digital-logic course covers appears in one small, working circuit that students can see, simulate and press buttons on:
+
+| Concept | Where it appears |
+|---|---|
+| Basic gates (AND, OR, NOT, NAND) | 25 AND, 8 OR, 14 NOT and 14 NAND gates, no other cell types |
+| Sequential logic from gates | Cross-coupled NAND SR latch (memory with no flip-flop or clock) |
+| Priority / lock-out (mutual exclusion) | 4-input AND chain that blocks a press once another buzzer has won |
+| Encoder | 5 active-low latch outputs to a 3-bit code |
+| Decoder | 3-bit code to 7-segment display |
+| Boolean simplification | `d0 = b1+b3+b5`, `d1 = b2+b3`, `d2 = b4+b5`, and each segment as a small sum-of-products |
+| Race conditions | Two buttons pressed at the same instant |
+
+Suggested class activities: trace the signals in Wokwi when a buzzer is pressed, fill in the truth table of one latch, or derive the encoder and segment equations by hand and compare them with the gates.
 
 ## Pinout
 

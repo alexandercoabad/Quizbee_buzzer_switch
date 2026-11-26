@@ -2,7 +2,7 @@
 
 # Quiz Bee Buzzer Switch
 
-A 5-player quiz bee buzzer with lock-out latches, a 3-bit encoder and a 7-segment winner display, built from 61 logic gates in Wokwi for [Tiny Tapeout](https://tinytapeout.com).
+A 5-player quiz bee buzzer with lock-out latches, a 3-bit encoder and a 7-segment winner display, built from 61 basic logic gates (AND, OR, NOT, NAND) in Wokwi for [Tiny Tapeout](https://tinytapeout.com). Pure logic gates, no microcontroller and no clock, which makes it a good teaching example for basic logic circuits: SR latches, lock-out logic, encoders and decoders.
 
 - [Read the documentation for project](docs/info.md)
 

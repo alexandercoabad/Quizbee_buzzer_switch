@@ -4,7 +4,7 @@ project:
   title:        "Quiz Bee Buzzer Switch"      # Project title
   author:       "Alexander Co Abad"      # Your name
   discord:      "alexandercoabad_25756"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "5-player quiz bee buzzer: lock-out latches, encoder and 7-segment winner display"      # One line description of what your project does
+  description:  "Pure logic-gate 5-player quiz bee buzzer (latches, encoder, 7-segment display) - great for teaching basic logic circuits"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
