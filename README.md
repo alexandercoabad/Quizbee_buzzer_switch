@@ -1,6 +1,6 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/wokwi_test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
-# Quizbee buzzer switch
+# Quiz Bee Buzzer Switch
 
 A 5-player quiz bee buzzer with lock-out latches, a 3-bit encoder and a 7-segment winner display, built from 61 logic gates in Wokwi for [Tiny Tapeout](https://tinytapeout.com).
 
@@ -16,6 +16,8 @@ A 5-player quiz bee buzzer with lock-out latches, a 3-bit encoder and a 7-segmen
 ## Wokwi project
 
 The design lives in Wokwi (`wokwi_id` in [info.yaml](info.yaml)). The GitHub action fetches the digital netlist from Wokwi and builds the ASIC files. The `wokwi_id` is the number after `wokwi.com/projects/` in your project's URL; after changing the diagram, make sure it points to the updated project.
+
+Wokwi link: https://wokwi.com/projects/481740336442682369
 
 ## Enable GitHub actions to build the results page
 
