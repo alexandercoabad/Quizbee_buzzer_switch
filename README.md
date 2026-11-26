@@ -19,6 +19,15 @@ The design lives in Wokwi (`wokwi_id` in [info.yaml](info.yaml)). The GitHub act
 
 Wokwi link: https://wokwi.com/projects/481740336442682369
 
+<img width="830" height="411" alt="Screenshot 2026-11-26 at 9 40 08 PM" src="https://github.com/user-attachments/assets/05f40e5c-dd40-48d2-808d-804665202343" />
+
+
+## Layout
+3D viewer link: https://gds-viewer.tinytapeout.com/?model=https://alexandercoabad.github.io/Quizbee_buzzer_switch/tinytapeout.oas&pdk=sky130A
+
+<img width="1189" height="649" alt="Screenshot 2026-11-27 at 5 01 40 AM" src="https://github.com/user-attachments/assets/b4b34f55-c974-48ac-99c6-f3a46cb430ef" />
+
+
 ## Enable GitHub actions to build the results page
 
 - [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
